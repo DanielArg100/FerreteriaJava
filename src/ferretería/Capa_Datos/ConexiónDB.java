@@ -6,6 +6,8 @@ package ferretería.Capa_Datos;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -13,11 +15,16 @@ import java.sql.DriverManager;
  */
 public class ConexiónDB {
     Connection con;
+    
     public Connection ConectarDB(){
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-                con=DriverManager.getConnection("jdbc:mysql://localhost:3306/","root","");
-        } catch (Exception e) {
+            con=DriverManager.getConnection("jdbc:mysql://localhost:3306/sistema_ferreteria","root","");
+            JOptionPane.showMessageDialog(null, "Base de datos conectada");
+        } catch (ClassNotFoundException | SQLException error) {
+            JOptionPane.showMessageDialog(null, "Error en; "+error.toString());
         }
+        return con;
     }
+    
 }
