@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package ferretería.Capa_Presentación;
+import ferretería.Capa_Datos.ConexiónDB;
 
 /**
  *
@@ -15,6 +16,8 @@ public class Login extends javax.swing.JFrame {
      */
     public Login() {
         initComponents();
+        ConexiónDB aux= new ConexiónDB();
+        aux.ConectarDB();
         
     }
 
@@ -41,24 +44,30 @@ public class Login extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(0, 51, 102));
 
         jLabel1.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Login");
 
         jLabel2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Usuario");
 
         jLabel3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Contraseña");
 
         txtUsuario.setBackground(new java.awt.Color(51, 0, 102));
         txtUsuario.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        txtUsuario.setForeground(new java.awt.Color(255, 255, 255));
         txtUsuario.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         txtPassword.setBackground(new java.awt.Color(51, 0, 102));
         txtPassword.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        txtPassword.setForeground(new java.awt.Color(255, 255, 255));
         txtPassword.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         btnIngresar.setBackground(new java.awt.Color(51, 0, 102));
         btnIngresar.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        btnIngresar.setForeground(new java.awt.Color(255, 255, 255));
         btnIngresar.setText("Ingresar");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
